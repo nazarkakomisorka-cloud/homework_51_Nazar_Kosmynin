@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.welcome-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 340px;
+}
+
+.welcome-card__title {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.welcome-card__subtitle {
+    color: #888;
+    margin-bottom: 28px;
+    font-size: 15px;
+}
+
+.welcome-card__input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-bottom: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.welcome-card__input:focus {
+    border-color: #4a90d9;
+}
+
+.welcome-card__btn {
+    width: 100%;
+    padding: 10px;
+    background: #4a90d9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.welcome-card__btn:hover {
+    background: #357abd;
+}
+
+.cat-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 380px;
+}
+
+.cat-card__name {
+    font-size: 26px;
+    margin-bottom: 4px;
+}
+
+.cat-card__age {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.cat-card__avatar {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: #f9f9f9;
+    padding: 8px;
+}
+
+.cat-card__sleeping {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin-bottom: 14px;
+    color: #f57f17;
+    font-size: 14px;
+}
+
+.stats {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.stats__row {
+    margin-bottom: 10px;
+}
+
+.stats__label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.stats__bar {
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    accent-color: #4a90d9;
+}
+
+.action-form {
+    display: flex;
+    gap: 10px;
+}
+
+.action-form__select {
+    flex: 1;
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.action-form__btn {
+    padding: 9px 22px;
+    background: #4a90d9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.action-form__btn:hover {
+    background: #357abd;
+}

@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ cat.name }}</title>
+    <link rel="stylesheet" href="{% static 'cat/style.css' %}">
+</head>
+<body>
+    <div class="cat-card">
+        <h1 class="cat-card__name">{{ cat.name }}</h1>
+        <p class="cat-card__age">Возраст: {{ cat.age }} год</p>
+
+        <img class="cat-card__avatar" src="{% static avatar %}" alt="кот">
+
+        {% if cat.is_sleeping %}
+        <div class="cat-card__sleeping">Кот спит...</div>
+        {% endif %}
+
+        <div class="stats">
+            <div class="stats__row">
+                <div class="stats__label">
+                    <span>Сытость</span>
+                    <span>{{ cat.satiety }}/100</span>
+                </div>
+                <progress class="stats__bar" value="{{ cat.satiety }}" max="100"></progress>
+            </div>
+            <div class="stats__row">
+                <div class="stats__label">
+                    <span>Счастье</span>
+                    <span>{{ cat.happiness }}/100</span>
+                </div>
+                <progress class="stats__bar" value="{{ cat.happiness }}" max="100"></progress>
+            </div>
+        </div>
+
+        <form class="action-form" method="post">
+            {% csrf_token %}
+            <select class="action-form__select" name="action">
+                <option value="feed">Покормить</option>
+                <option value="play">Играть</option>
+                <option value="sleep">Спать</option>
+            </select>
+            <button class="action-form__btn" type="submit">Ок</button>
+        </form>
+    </div>
+</body>
+</html>

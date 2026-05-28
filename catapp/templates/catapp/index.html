@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Симулятор кота</title>
+    <link rel="stylesheet" href="{% static 'cat/style.css' %}">
+</head>
+<body>
+    <div class="welcome-card">
+        <h1 class="welcome-card__title">Симулятор кота</h1>
+        <p class="welcome-card__subtitle">Для начала введите имя кота</p>
+        <form method="post">
+            {% csrf_token %}
+            <input class="welcome-card__input" type="text" name="name" placeholder="Введите имя кота" required autofocus>
+            <button class="welcome-card__btn" type="submit">Создать</button>
+        </form>
+    </div>
+</body>
+</html>
